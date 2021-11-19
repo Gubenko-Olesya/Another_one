@@ -6,7 +6,7 @@ int random (int array1[], int n) //Gubenko Olesya 112
 {
 	int i;
 	for (i=0; i<n; i++) {
-		array1[i]=rand()%100+1;
+		array1[i]=rand();
 	}
 	return 0;
 }

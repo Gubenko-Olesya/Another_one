@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "my_functions.h"
 
-
-int quicksort(int array[], int n) {
+int quicksort(int array[], int n) { //Gubenko Olesya 112
 	int pivot;
 	int start[n], end[n];
 	start[0] = 0;
@@ -30,7 +30,7 @@ int quicksort(int array[], int n) {
 				while ((bit_compare(array[low], pivot)>=0)&&(bit_compare(low, high)>0))
 					++low;
 				//if (low < high) {
-				if (bit_compare(low, high)>0)
+				if (bit_compare(low, high)>0) {
 					array[high] = array[low];
 					--high;
 				}

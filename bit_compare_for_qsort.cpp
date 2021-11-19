@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int bit_compare(int a, int b)
+int bit_compare_for_qsort(const int *a, const int *b)//Gubenko Olesya 112
 {
 	int i, mask=1, c_a=0, c_b;
 	for (i=0;i<32;i++) {
@@ -9,6 +9,7 @@ int bit_compare(int a, int b)
 			++c_a;
 		mask<<=1;
 	}
+	mask=1;
 	for (i=0;i<32;i++) {
 		if ((b&mask)!=0)
 			++c_b;
@@ -21,3 +22,4 @@ int bit_compare(int a, int b)
 	if (c_a>c_b)
 		return -1;
 }
+
